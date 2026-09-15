@@ -1,0 +1,2597 @@
+{
+  "schema_version": "research_valuation_request_v1",
+  "security_code": "6225",
+  "edinet_code": "E38483",
+  "financial_scope": "CONSOLIDATED",
+  "currency_unit": "JPY_MILLION",
+  "valuation_as_of": "2026-08-01",
+  "information_cutoff": "2026-09-14",
+  "sources": [
+    {
+      "source_id": "D23",
+      "title": "2023年7月期 有価証券報告書 第38期",
+      "url": "https://api.edinet-fsa.go.jp/api/v2/documents/S100S31F?type=2",
+      "published_on": "2023-10-27"
+    },
+    {
+      "source_id": "D24",
+      "title": "2024年7月期 有価証券報告書 第39期",
+      "url": "https://api.edinet-fsa.go.jp/api/v2/documents/S100ULL0?type=2",
+      "published_on": "2024-10-30"
+    },
+    {
+      "source_id": "D25",
+      "title": "2025年7月期 有価証券報告書 第40期",
+      "url": "https://api.edinet-fsa.go.jp/api/v2/documents/S100WWVI?type=2",
+      "published_on": "2025-10-24"
+    },
+    {
+      "source_id": "S26",
+      "title": "2026年7月期 決算短信〔日本基準〕（非連結）",
+      "url": "https://www.release.tdnet.info/inbs/140120260911534845.pdf",
+      "published_on": "2026-09-11"
+    },
+    {
+      "source_id": "P26",
+      "title": "2026年7月期 決算説明資料",
+      "url": "https://www.release.tdnet.info/inbs/140120260911534732.pdf",
+      "published_on": "2026-09-11"
+    },
+    {
+      "source_id": "M26",
+      "title": "中期経営計画のローリングに関するお知らせ／2027–2031",
+      "url": "https://www.release.tdnet.info/inbs/140120260911534743.pdf",
+      "published_on": "2026-09-11"
+    },
+    {
+      "source_id": "G27",
+      "title": "連結決算への移行及び2027年7月期連結業績予想に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260911534695.pdf",
+      "published_on": "2026-09-11"
+    },
+    {
+      "source_id": "SH26",
+      "title": "株式の立会外分売に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260911534756.pdf",
+      "published_on": "2026-09-11"
+    },
+    {
+      "source_id": "A26",
+      "title": "ゴダイエンジニアリングの株式取得（子会社化）に関するお知らせ",
+      "url": "https://ssl4.eir-parts.net/doc/6225/tdnet/2835491/00.pdf",
+      "published_on": "2026-06-12"
+    },
+    {
+      "source_id": "H26",
+      "title": "第41期 半期報告書（2025-08-01～2026-01-31）",
+      "url": "https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100XQPN.pdf",
+      "published_on": "2026-03-13"
+    },
+    {
+      "source_id": "JGB",
+      "title": "財務省 国債金利情報／2026-07-31行",
+      "url": "https://www.mof.go.jp/jgbs/reference/interest_rate/data/jgbcm_all.csv",
+      "published_on": "2026-08-03"
+    },
+    {
+      "source_id": "ERP",
+      "title": "NYU Stern Country Default Spreads and Risk Premiums（2026-01-05版）",
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html",
+      "published_on": "2026-01-05"
+    },
+    {
+      "source_id": "NSE",
+      "title": "名古屋証券取引所日報 2026年7月31日",
+      "url": "https://www.nse.or.jp/market/condition/report/files/20260731.pdf",
+      "published_on": "2026-07-31"
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario_id": "BASE",
+      "fcff": {
+        "valuation_as_of": "2026-08-01",
+        "discount_rate": {
+          "value": "0.1",
+          "basis": "ANALYST_ASSUMPTION",
+          "evidence_refs": [
+            "JGB:R8.7.31行 10年2.801%",
+            "ERP:Japan行 5.14%・CDSベース4.69%",
+            "M26:PDF p18 流動性改善方針",
+            "NSE:2026-07-31 普通株62250"
+          ]
+        },
+        "schedule": {
+          "schema_version": "fcff_schedule_request_v1",
+          "currency_unit": "JPY_MILLION",
+          "periods": [
+            {
+              "period_id": "FY2027",
+              "discount_half_years": 2,
+              "ebit": {
+                "value": "536.492049428988113413",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p13 セグメント情報",
+                  "P26:PDF p27 受注高・受注残高",
+                  "M26:PDF p9・p11–15 成長戦略",
+                  "D25:p65 収益の分解",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "cash_tax_rate": {
+                "value": "0.33",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p64 税効果会計関係",
+                  "S26:PDF p8・p11 税とCF",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "depreciation": {
+                "value": "82.6253268131868131863846153846153846153846154",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p11・p13 減価償却",
+                  "D24:p63 企業結合",
+                  "D25:p72 固定資産明細",
+                  "M26:PDF p11–12 拠点・工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "gross_operating_investment": {
+                "value": "237.795615384615384615384615384615384615384615",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p24 設備計画",
+                  "S26:PDF p6・p11・p13 設備残高・支出・増加",
+                  "M26:PDF p11–12 関東支店・新工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "delta_operating_working_capital": {
+                "value": "152.244764375554979214",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p6–7 BS・p4 支払条件変更",
+                  "M26:PDF p11–12 成長投資",
+                  "D25:p53 収益認識",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "after_tax_operating_cash_adjustments": {
+                "value": "-0.66",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p8・p11 特別利益・引当金",
+                  "D23:p44 特別利益",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              }
+            },
+            {
+              "period_id": "FY2028",
+              "discount_half_years": 4,
+              "ebit": {
+                "value": "564.696312682237478735",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p13 セグメント情報",
+                  "P26:PDF p27 受注高・受注残高",
+                  "M26:PDF p9・p11–15 成長戦略",
+                  "D25:p65 収益の分解",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "cash_tax_rate": {
+                "value": "0.33",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p64 税効果会計関係",
+                  "S26:PDF p8・p11 税とCF",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "depreciation": {
+                "value": "105.742134516314454776136094674556213017751479",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p11・p13 減価償却",
+                  "D24:p63 企業結合",
+                  "D25:p72 固定資産明細",
+                  "M26:PDF p11–12 拠点・工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "gross_operating_investment": {
+                "value": "334.040710059171597633136094674556213017751479",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p24 設備計画",
+                  "S26:PDF p6・p11・p13 設備残高・支出・増加",
+                  "M26:PDF p11–12 関東支店・新工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "delta_operating_working_capital": {
+                "value": "141.484509142034214296507246376811594202898551",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p6–7 BS・p4 支払条件変更",
+                  "M26:PDF p11–12 成長投資",
+                  "D25:p53 収益認識",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "after_tax_operating_cash_adjustments": {
+                "value": "-0.66",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p8・p11 特別利益・引当金",
+                  "D23:p44 特別利益",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              }
+            },
+            {
+              "period_id": "FY2029",
+              "discount_half_years": 6,
+              "ebit": {
+                "value": "606.899519541854116351",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p13 セグメント情報",
+                  "P26:PDF p27 受注高・受注残高",
+                  "M26:PDF p9・p11–15 成長戦略",
+                  "D25:p65 収益の分解",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "cash_tax_rate": {
+                "value": "0.33",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p64 税効果会計関係",
+                  "S26:PDF p8・p11 税とCF",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "depreciation": {
+                "value": "134.833056154956239027387801547564861174328630",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p11・p13 減価償却",
+                  "D24:p63 企業結合",
+                  "D25:p72 固定資産明細",
+                  "M26:PDF p11–12 拠点・工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "gross_operating_investment": {
+                "value": "346.801188529813381884387801547564861174328630",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p24 設備計画",
+                  "S26:PDF p6・p11・p13 設備残高・支出・増加",
+                  "M26:PDF p11–12 関東支店・新工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "delta_operating_working_capital": {
+                "value": "122.133317977145243305420289855072463768115942",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p6–7 BS・p4 支払条件変更",
+                  "M26:PDF p11–12 成長投資",
+                  "D25:p53 収益認識",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "after_tax_operating_cash_adjustments": {
+                "value": "-0.66",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p8・p11 特別利益・引当金",
+                  "D23:p44 特別利益",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              }
+            },
+            {
+              "period_id": "FY2030",
+              "discount_half_years": 8,
+              "ebit": {
+                "value": "673.079968905391051488",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p13 セグメント情報",
+                  "P26:PDF p27 受注高・受注残高",
+                  "M26:PDF p9・p11–15 成長戦略",
+                  "D25:p65 収益の分解",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "cash_tax_rate": {
+                "value": "0.33",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p64 税効果会計関係",
+                  "S26:PDF p8・p11 税とCF",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "depreciation": {
+                "value": "155.456897354292803272909001785651762893456112",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p11・p13 減価償却",
+                  "D24:p63 企業結合",
+                  "D25:p72 固定資産明細",
+                  "M26:PDF p11–12 拠点・工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "gross_operating_investment": {
+                "value": "130.758963995938517558909001785651762893456112",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p24 設備計画",
+                  "S26:PDF p6・p11・p13 設備残高・支出・増加",
+                  "M26:PDF p11–12 関東支店・新工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "delta_operating_working_capital": {
+                "value": "169.614347910315268342420289855072463768115942",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p6–7 BS・p4 支払条件変更",
+                  "M26:PDF p11–12 成長投資",
+                  "D25:p53 収益認識",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "after_tax_operating_cash_adjustments": {
+                "value": "-0.66",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p8・p11 特別利益・引当金",
+                  "D23:p44 特別利益",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              }
+            },
+            {
+              "period_id": "FY2031",
+              "discount_half_years": 10,
+              "ebit": {
+                "value": "715.688618430159176247",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p13 セグメント情報",
+                  "P26:PDF p27 受注高・受注残高",
+                  "M26:PDF p9・p11–15 成長戦略",
+                  "D25:p65 収益の分解",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "cash_tax_rate": {
+                "value": "0.33",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p64 税効果会計関係",
+                  "S26:PDF p8・p11 税とCF",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "depreciation": {
+                "value": "173.476548864962412567971925137290495646295513",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p11・p13 減価償却",
+                  "D24:p63 企業結合",
+                  "D25:p72 固定資産明細",
+                  "M26:PDF p11–12 拠点・工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "gross_operating_investment": {
+                "value": "155.021245373775212567971925137290495646295513",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p24 設備計画",
+                  "S26:PDF p6・p11・p13 設備残高・支出・増加",
+                  "M26:PDF p11–12 関東支店・新工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "delta_operating_working_capital": {
+                "value": "149.502803046020189505420289855072463768115942",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p6–7 BS・p4 支払条件変更",
+                  "M26:PDF p11–12 成長投資",
+                  "D25:p53 収益認識",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "after_tax_operating_cash_adjustments": {
+                "value": "-0.66",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p8・p11 特別利益・引当金",
+                  "D23:p44 特別利益",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              }
+            },
+            {
+              "period_id": "FY2032",
+              "discount_half_years": 12,
+              "ebit": {
+                "value": "709.064802019860641578",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p13 セグメント情報",
+                  "P26:PDF p27 受注高・受注残高",
+                  "M26:PDF p9・p11–15 成長戦略",
+                  "D25:p65 収益の分解",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "cash_tax_rate": {
+                "value": "0.33",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p64 税効果会計関係",
+                  "S26:PDF p8・p11 税とCF",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "depreciation": {
+                "value": "197.155339754304085886121452081489033438033284",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p11・p13 減価償却",
+                  "D24:p63 企業結合",
+                  "D25:p72 固定資産明細",
+                  "M26:PDF p11–12 拠点・工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "gross_operating_investment": {
+                "value": "212.634813532940629886121452081489033438033284",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p24 設備計画",
+                  "S26:PDF p6・p11・p13 設備残高・支出・増加",
+                  "M26:PDF p11–12 関東支店・新工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "delta_operating_working_capital": {
+                "value": "66.953089285554017049710144927536231884057971",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p6–7 BS・p4 支払条件変更",
+                  "M26:PDF p11–12 成長投資",
+                  "D25:p53 収益認識",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "after_tax_operating_cash_adjustments": {
+                "value": "-0.66",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p8・p11 特別利益・引当金",
+                  "D23:p44 特別利益",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              }
+            },
+            {
+              "period_id": "FY2033",
+              "discount_half_years": 14,
+              "ebit": {
+                "value": "690.880192747660553302",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p13 セグメント情報",
+                  "P26:PDF p27 受注高・受注残高",
+                  "M26:PDF p9・p11–15 成長戦略",
+                  "D25:p65 収益の分解",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "cash_tax_rate": {
+                "value": "0.33",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p64 税効果会計関係",
+                  "S26:PDF p8・p11 税とCF",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "depreciation": {
+                "value": "227.509443869078408177601675478641192428499944",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p11・p13 減価償却",
+                  "D24:p63 企業結合",
+                  "D25:p72 固定資産明細",
+                  "M26:PDF p11–12 拠点・工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "gross_operating_investment": {
+                "value": "251.730570800713649868601675478641192428499944",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p24 設備計画",
+                  "S26:PDF p6・p11・p13 設備残高・支出・増加",
+                  "M26:PDF p11–12 関東支店・新工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "delta_operating_working_capital": {
+                "value": "55.051540541172980355710144927536231884057971",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p6–7 BS・p4 支払条件変更",
+                  "M26:PDF p11–12 成長投資",
+                  "D25:p53 収益認識",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "after_tax_operating_cash_adjustments": {
+                "value": "-0.66",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p8・p11 特別利益・引当金",
+                  "D23:p44 特別利益",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              }
+            }
+          ],
+          "terminal": {
+            "nopat": {
+              "value": "471.193175078046559273",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "G27:PDF p1 FY2027連結会社予想",
+                "A26:PDF p1–3 製品補完・業績・日程",
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+              ]
+            },
+            "growth": {
+              "value": "0.015",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "M26:PDF p8–9 中期計画",
+                "D25:p15–17 事業リスク"
+              ]
+            },
+            "roic": {
+              "value": "0.106475893900111967376432100548039671227986824",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p6–7 親会社BS",
+                "M26:PDF p11–12 投資計画"
+              ]
+            }
+          }
+        }
+      },
+      "equity": {
+        "shares_outstanding_millions": {
+          "value": "1.835",
+          "basis": "DERIVED",
+          "evidence_refs": [
+            "S26:PDF p2 発行済株式・自己株式"
+          ]
+        },
+        "adjustments": {
+          "non_operating_cash": {
+            "amount": {
+              "value": "904.328",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "GROUP_EXCESS_CASH_POST_SETTLEMENT"
+            ],
+            "included_in_enterprise_value": false
+          },
+          "other_non_operating_assets": {
+            "amount": {
+              "value": "140",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "PARENT_EXTERNAL_BONDS"
+            ],
+            "included_in_enterprise_value": false
+          },
+          "interest_bearing_debt": {
+            "amount": {
+              "value": "50",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "GODAI_ASSUMED_EXTERNAL_BORROWINGS"
+            ],
+            "included_in_enterprise_value": false
+          },
+          "lease_debt": {
+            "amount": {
+              "value": "5",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "GODAI_ASSUMED_FINANCE_LEASES"
+            ],
+            "included_in_enterprise_value": false
+          },
+          "pension_claims": {
+            "amount": {
+              "value": "237.6",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "PARENT_RETIREMENT",
+              "GODAI_ASSUMED_RETIREMENT"
+            ],
+            "included_in_enterprise_value": false
+          },
+          "preferred_claims": {
+            "amount": {
+              "value": "0",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "GROUP_PREFERRED"
+            ],
+            "included_in_enterprise_value": false
+          },
+          "nci": {
+            "amount": {
+              "value": "0",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "GROUP_NCI"
+            ],
+            "included_in_enterprise_value": false
+          },
+          "other_claims": {
+            "amount": {
+              "value": "143.393068224885952",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "PARENT_CURRENT_TAX",
+              "PARENT_NET_DTL",
+              "GODAI_ASSUMED_TAX_CLAIM",
+              "PARENT_OPTIONS_VALUE_ALLOWANCE"
+            ],
+            "included_in_enterprise_value": false
+          }
+        }
+      },
+      "rationales": {
+        "fcff.schedule.periods.0.ebit": "FY2027連結EBIT=親会社既存536.492049428988113413+Godai取得のれん償却前・物理償却後営業利益5−取得のれん償却2−統合費3。内部売上の対応費用を同額消去、未実現内部利益は重要性小と仮定。会社連結予想に加算していない。",
+        "fcff.schedule.periods.0.cash_tax_rate": "親会社既存0.33を両社の正の課税営業利益へ適用する研究税率。Godai損失即時通算せず別CF調整。のれん償却の税便益は認めない。",
+        "fcff.schedule.periods.0.depreciation": "親会社71.240711428571428571+Godai物理償却9.3846153846153846153846153846153846153846154+取得のれん償却2。物理資産初期56/7を年98%残存、設備投資7年・取得年半期償却、維持投資=物理償却を同時に解く。",
+        "fcff.schedule.periods.0.gross_operating_investment": "親会社既存CAPEX218.411+Godai維持9.3846153846153846153846153846153846153846154+成長10。対価93と取得費用を含まない。工場/関東支店は親会社計画に一度だけ含む。",
+        "fcff.schedule.periods.0.delta_operating_working_capital": "親会社既存増減139.820764375554979214+Godai18.30。Godai期末=売上138×営業NWC比率.35+必要現金20。初期は仮定取得BSの営業NWC30+必要現金20。内部債権債務両側の同額消去は純額変化ゼロ。残取得費用は7/31営業未払金に含むと仮定しt0支払で初期NWCを増やすため、FY2027の親会社deltaから残費用を一度減算。",
+        "fcff.schedule.periods.0.after_tax_operating_cash_adjustments": "既存親会社調整0−税率×非損金のれん償却0.66+Godai赤字の即時税便益取消0.00。統合費は既にEBIT控除、二重控除なし。繰越欠損金の追加便益は未評価。",
+        "fcff.schedule.periods.1.ebit": "FY2028連結EBIT=親会社既存559.396312682237478735+Godai取得のれん償却前・物理償却後営業利益9.3−取得のれん償却2−統合費2。内部売上の対応費用を同額消去、未実現内部利益は重要性小と仮定。会社連結予想に加算していない。",
+        "fcff.schedule.periods.1.cash_tax_rate": "親会社既存0.33を両社の正の課税営業利益へ適用する研究税率。Godai損失即時通算せず別CF調整。のれん償却の税便益は認めない。",
+        "fcff.schedule.periods.1.depreciation": "親会社91.701424457142857143+Godai物理償却12.0407100591715976331360946745562130177514793+取得のれん償却2。物理資産初期56/7を年98%残存、設備投資7年・取得年半期償却、維持投資=物理償却を同時に解く。",
+        "fcff.schedule.periods.1.gross_operating_investment": "親会社既存CAPEX314+Godai維持12.0407100591715976331360946745562130177514793+成長8。対価93と取得費用を含まない。工場/関東支店は親会社計画に一度だけ含む。",
+        "fcff.schedule.periods.1.delta_operating_working_capital": "親会社既存増減133.070741026092185311+Godai8.4137681159420289855072463768115942028985507。Godai期末=売上155×営業NWC比率.35+必要現金22.4637681159420289855072463768115942028985507。初期は仮定取得BSの営業NWC30+必要現金20。内部債権債務両側の同額消去は純額変化ゼロ。残取得費用は7/31営業未払金に含むと仮定しt0支払で初期NWCを増やすため、FY2027の親会社deltaから残費用を一度減算。",
+        "fcff.schedule.periods.1.after_tax_operating_cash_adjustments": "既存親会社調整0−税率×非損金のれん償却0.66+Godai赤字の即時税便益取消0.00。統合費は既にEBIT控除、二重控除なし。繰越欠損金の追加便益は未評価。",
+        "fcff.schedule.periods.2.ebit": "FY2029連結EBIT=親会社既存595.899519541854116351+Godai取得のれん償却前・物理償却後営業利益14−取得のれん償却2−統合費1。内部売上の対応費用を同額消去、未実現内部利益は重要性小と仮定。会社連結予想に加算していない。",
+        "fcff.schedule.periods.2.cash_tax_rate": "親会社既存0.33を両社の正の課税営業利益へ適用する研究税率。Godai損失即時通算せず別CF調整。のれん償却の税便益は認めない。",
+        "fcff.schedule.periods.2.depreciation": "親会社118.031867625142857143+Godai物理償却14.8011885298133818843878015475648611743286299+取得のれん償却2。物理資産初期56/7を年98%残存、設備投資7年・取得年半期償却、維持投資=物理償却を同時に解く。",
+        "fcff.schedule.periods.2.gross_operating_investment": "親会社既存CAPEX326+Godai維持14.8011885298133818843878015475648611743286299+成長6。対価93と取得費用を含まない。工場/関東支店は親会社計画に一度だけ含む。",
+        "fcff.schedule.periods.2.delta_operating_working_capital": "親会社既存増減112.234767252507562146+Godai9.8985507246376811594202898550724637681159421。Godai期末=売上175×営業NWC比率.35+必要現金25.3623188405797101449275362318840579710144928。初期は仮定取得BSの営業NWC30+必要現金20。内部債権債務両側の同額消去は純額変化ゼロ。残取得費用は7/31営業未払金に含むと仮定しt0支払で初期NWCを増やすため、FY2027の親会社deltaから残費用を一度減算。",
+        "fcff.schedule.periods.2.after_tax_operating_cash_adjustments": "既存親会社調整0−税率×非損金のれん償却0.66+Godai赤字の即時税便益取消0.00。統合費は既にEBIT控除、二重控除なし。繰越欠損金の追加便益は未評価。",
+        "fcff.schedule.periods.3.ebit": "FY2030連結EBIT=親会社既存657.529968905391051488+Godai取得のれん償却前・物理償却後営業利益17.55−取得のれん償却2−統合費0。内部売上の対応費用を同額消去、未実現内部利益は重要性小と仮定。会社連結予想に加算していない。",
+        "fcff.schedule.periods.3.cash_tax_rate": "親会社既存0.33を両社の正の課税営業利益へ適用する研究税率。Godai損失即時通算せず別CF調整。のれん償却の税便益は認めない。",
+        "fcff.schedule.periods.3.depreciation": "親会社135.697933358354285714+Godai物理償却17.7589639959385175589090017856517628934561115+取得のれん償却2。物理資産初期56/7を年98%残存、設備投資7年・取得年半期償却、維持投資=物理償却を同時に解く。",
+        "fcff.schedule.periods.3.gross_operating_investment": "親会社既存CAPEX108+Godai維持17.7589639959385175589090017856517628934561115+成長5。対価93と取得費用を含まない。工場/関東支店は親会社計画に一度だけ含む。",
+        "fcff.schedule.periods.3.delta_operating_working_capital": "親会社既存増減159.715797185677587183+Godai9.8985507246376811594202898550724637681159420。Godai期末=売上195×営業NWC比率.35+必要現金28.2608695652173913043478260869565217391304348。初期は仮定取得BSの営業NWC30+必要現金20。内部債権債務両側の同額消去は純額変化ゼロ。残取得費用は7/31営業未払金に含むと仮定しt0支払で初期NWCを増やすため、FY2027の親会社deltaから残費用を一度減算。",
+        "fcff.schedule.periods.3.after_tax_operating_cash_adjustments": "既存親会社調整0−税率×非損金のれん償却0.66+Godai赤字の即時税便益取消0.00。統合費は既にEBIT控除、二重控除なし。繰越欠損金の追加便益は未評価。",
+        "fcff.schedule.periods.4.ebit": "FY2031連結EBIT=親会社既存696.188618430159176247+Godai取得のれん償却前・物理償却後営業利益21.5−取得のれん償却2−統合費0。内部売上の対応費用を同額消去、未実現内部利益は重要性小と仮定。会社連結予想に加算していない。",
+        "fcff.schedule.periods.4.cash_tax_rate": "親会社既存0.33を両社の正の課税営業利益へ適用する研究税率。Godai損失即時通算せず別CF調整。のれん償却の税便益は認めない。",
+        "fcff.schedule.periods.4.depreciation": "親会社150.4553034911872+Godai物理償却21.0212453737752125679719251372904956462955133+取得のれん償却2。物理資産初期56/7を年98%残存、設備投資7年・取得年半期償却、維持投資=物理償却を同時に解く。",
+        "fcff.schedule.periods.4.gross_operating_investment": "親会社既存CAPEX130+Godai維持21.0212453737752125679719251372904956462955133+成長4。対価93と取得費用を含まない。工場/関東支店は親会社計画に一度だけ含む。",
+        "fcff.schedule.periods.4.delta_operating_working_capital": "親会社既存増減139.604252321382508346+Godai9.8985507246376811594202898550724637681159422。Godai期末=売上215×営業NWC比率.35+必要現金31.1594202898550724637681159420289855072463768。初期は仮定取得BSの営業NWC30+必要現金20。内部債権債務両側の同額消去は純額変化ゼロ。残取得費用は7/31営業未払金に含むと仮定しt0支払で初期NWCを増やすため、FY2027の親会社deltaから残費用を一度減算。",
+        "fcff.schedule.periods.4.after_tax_operating_cash_adjustments": "既存親会社調整0−税率×非損金のれん償却0.66+Godai赤字の即時税便益取消0.00。統合費は既にEBIT控除、二重控除なし。繰越欠損金の追加便益は未評価。",
+        "fcff.schedule.periods.5.ebit": "FY2032連結EBIT=親会社既存688.564802019860641578+Godai取得のれん償却前・物理償却後営業利益22.5−取得のれん償却2−統合費0。内部売上の対応費用を同額消去、未実現内部利益は重要性小と仮定。会社連結予想に加算していない。",
+        "fcff.schedule.periods.5.cash_tax_rate": "親会社既存0.33を両社の正の課税営業利益へ適用する研究税率。Godai損失即時通算せず別CF調整。のれん償却の税便益は認めない。",
+        "fcff.schedule.periods.5.depreciation": "親会社170.520526221363456+Godai物理償却24.6348135329406298861214520814890334380332845+取得のれん償却2。物理資産初期56/7を年98%残存、設備投資7年・取得年半期償却、維持投資=物理償却を同時に解く。",
+        "fcff.schedule.periods.5.gross_operating_investment": "親会社既存CAPEX185+Godai維持24.6348135329406298861214520814890334380332845+成長3。対価93と取得費用を含まない。工場/関東支店は親会社計画に一度だけ含む。",
+        "fcff.schedule.periods.5.delta_operating_working_capital": "親会社既存増減62.00381392323517647+Godai4.949275362318840579710144927536231884057971。Godai期末=売上225×営業NWC比率.35+必要現金32.6086956521739130434782608695652173913043478。初期は仮定取得BSの営業NWC30+必要現金20。内部債権債務両側の同額消去は純額変化ゼロ。残取得費用は7/31営業未払金に含むと仮定しt0支払で初期NWCを増やすため、FY2027の親会社deltaから残費用を一度減算。",
+        "fcff.schedule.periods.5.after_tax_operating_cash_adjustments": "既存親会社調整0−税率×非損金のれん償却0.66+Godai赤字の即時税便益取消0.00。統合費は既にEBIT控除、二重控除なし。繰越欠損金の追加便益は未評価。",
+        "fcff.schedule.periods.6.ebit": "FY2033連結EBIT=親会社既存669.380192747660553302+Godai取得のれん償却前・物理償却後営業利益23.5−取得のれん償却2−統合費0。内部売上の対応費用を同額消去、未実現内部利益は重要性小と仮定。会社連結予想に加算していない。",
+        "fcff.schedule.periods.6.cash_tax_rate": "親会社既存0.33を両社の正の課税営業利益へ適用する研究税率。Godai損失即時通算せず別CF調整。のれん償却の税便益は認めない。",
+        "fcff.schedule.periods.6.depreciation": "親会社196.778873068364758309+Godai物理償却28.7305708007136498686016754786411924284999436+取得のれん償却2。物理資産初期56/7を年98%残存、設備投資7年・取得年半期償却、維持投資=物理償却を同時に解く。",
+        "fcff.schedule.periods.6.gross_operating_investment": "親会社既存CAPEX220+Godai維持28.7305708007136498686016754786411924284999436+成長3。対価93と取得費用を含まない。工場/関東支店は親会社計画に一度だけ含む。",
+        "fcff.schedule.periods.6.delta_operating_working_capital": "親会社既存増減50.102265178854139776+Godai4.949275362318840579710144927536231884057971。Godai期末=売上235×営業NWC比率.35+必要現金34.0579710144927536231884057971014492753623188。初期は仮定取得BSの営業NWC30+必要現金20。内部債権債務両側の同額消去は純額変化ゼロ。残取得費用は7/31営業未払金に含むと仮定しt0支払で初期NWCを増やすため、FY2027の親会社deltaから残費用を一度減算。",
+        "fcff.schedule.periods.6.after_tax_operating_cash_adjustments": "既存親会社調整0−税率×非損金のれん償却0.66+Godai赤字の即時税便益取消0.00。統合費は既にEBIT控除、二重控除なし。繰越欠損金の追加便益は未評価。",
+        "fcff.schedule.terminal.nopat": "FY2034経済NOPAT=親会社旧終価NOPAT455.212000078046559273+GodaiFY2033償却前営業利益23.5×(1+g)×(1−税率)。取得のれんは非現金・税非控除のため除外、追加相乗効果なし。",
+        "fcff.schedule.terminal.growth": "既存シナリオ成長率をグループへ適用。ゴダイが永久に親会社より高成長とはしない。",
+        "fcff.schedule.terminal.roic": "経済NOPAT471.193175078046559273/FY2033連結営業投下資本4425.35073262767004918918840579710144927536232。取得原価のれん20を資本に残し、簿価償却だけによるROIC改善を排除。再投資=g×投下資本=66.3802609894150507378378260869565217391304348。",
+        "fcff.discount_rate": "目標D/V=0の研究仮定。円10年国債2.801%+推定beta1.1×ERP5.0%+規模・流動性調整0.017を0.1bp以内で丸め0.1。betaは薄商いの価格回帰で実測した値ではなく、設備循環・保守構成・集中度からの仮定。ERP5%は日本のNYU推計4.69–5.14%を参照した判断であり、2026-07-31観測値とはしない。8–12%感応度を併記。 取得規模は小さく追加の精密な子会社betaを推計せず、この連結シナリオにも同じ率を使用。",
+        "equity.shares_outstanding_millions": "7/31発行1.920−自己0.085=1.835百万株を8/1直後へ一日近似。現金取得で本件の新株なし。潜在株式は元シナリオの価値引当のみ、分母は二重希薄化しない。",
+        "equity.adjustments.non_operating_cash.amount": "親会社現金同等物1623.204−既存必要現金650−取得対価93−未払取得費用仮定5.876+Godai現金50−Godai必要現金20=904.328。親会社定期預金34.931は既存営業現金側に残す。",
+        "equity.adjustments.other_non_operating_assets.amount": "外部債券140×既存掛目1のみ。Godai株式/契約権利は連結消去。持分法投資・Godai金融資産を別途加算しない（仮定BSでは資産全額を営業資産/現金に配分）。",
+        "equity.adjustments.interest_bearing_debt.amount": "親会社公表借入ゼロ+Godai仮定50。総負債153の一部のみ。価格から借入を推定したものではない。",
+        "equity.adjustments.lease_debt.amount": "親会社認識リースゼロ+Godai仮定5。Godai償却・CAPEXに資産効果を含め、リース元本CFは別途FCFFに引かない。未認識営業賃借は既存営業費に含む仮定。",
+        "equity.adjustments.pension_claims.amount": "親会社233.600+Godai仮定4。不足額を請求権として一度控除、過去勤務分の支払をFCFFに再控除しない。",
+        "equity.adjustments.preferred_claims.amount": "親会社普通株のみ、Godai取得開示の全株取得に優先請求の記載なし。対象会社に別途優先請求なしという明示的条件で0。新規判明時に控除。",
+        "equity.adjustments.nci.amount": "Godai議決権100%取得。対象範囲は親会社とGodaiのみ、Godai傘下に少数持分子会社なしという条件で0。",
+        "equity.adjustments.other_claims.amount": "親会社税119.893+2.651+Godai仮定税4+既存オプション価値引当16.849068224885952。取得対価93は支払済みのため請求権から除去。取得費用は現金からのみ処理。PPA税はnetの資産調整に含む条件で追加DTLなし。"
+      },
+      "claimed_results": {
+        "enterprise_value": "3393.46729781512203303410031870623316489232209",
+        "equity_value": "4001.80222959023608103410031870623316489232209",
+        "value_per_share": "2180.81865372764909048179853880448673836093847"
+      }
+    },
+    {
+      "scenario_id": "DOWNSIDE",
+      "fcff": {
+        "valuation_as_of": "2026-08-01",
+        "discount_rate": {
+          "value": "0.12",
+          "basis": "ANALYST_ASSUMPTION",
+          "evidence_refs": [
+            "JGB:R8.7.31行 10年2.801%",
+            "ERP:Japan行 5.14%・CDSベース4.69%",
+            "M26:PDF p18 流動性改善方針",
+            "NSE:2026-07-31 普通株62250"
+          ]
+        },
+        "schedule": {
+          "schema_version": "fcff_schedule_request_v1",
+          "currency_unit": "JPY_MILLION",
+          "periods": [
+            {
+              "period_id": "FY2027",
+              "discount_half_years": 2,
+              "ebit": {
+                "value": "292.732295849263605848",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p13 セグメント情報",
+                  "P26:PDF p27 受注高・受注残高",
+                  "M26:PDF p9・p11–15 成長戦略",
+                  "D25:p65 収益の分解",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "cash_tax_rate": {
+                "value": "0.35",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p64 税効果会計関係",
+                  "S26:PDF p8・p11 税とCF",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "depreciation": {
+                "value": "85.5874364835164835167692307692307692307692308",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p11・p13 減価償却",
+                  "D24:p63 企業結合",
+                  "D25:p72 固定資産明細",
+                  "M26:PDF p11–12 拠点・工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "gross_operating_investment": {
+                "value": "127.769230769230769230769230769230769230769231",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p24 設備計画",
+                  "S26:PDF p6・p11・p13 設備残高・支出・増加",
+                  "M26:PDF p11–12 関東支店・新工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "delta_operating_working_capital": {
+                "value": "11.5286439357899560236521739130434782608695652",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p6–7 BS・p4 支払条件変更",
+                  "M26:PDF p11–12 成長投資",
+                  "D25:p53 収益認識",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "after_tax_operating_cash_adjustments": {
+                "value": "-14.35",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p8・p11 特別利益・引当金",
+                  "D23:p44 特別利益",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              }
+            },
+            {
+              "period_id": "FY2028",
+              "discount_half_years": 4,
+              "ebit": {
+                "value": "308.165464240827901706",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p13 セグメント情報",
+                  "P26:PDF p27 受注高・受注残高",
+                  "M26:PDF p9・p11–15 成長戦略",
+                  "D25:p65 収益の分解",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "cash_tax_rate": {
+                "value": "0.35",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p64 税効果会計関係",
+                  "S26:PDF p8・p11 税とCF",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "depreciation": {
+                "value": "97.5046463337278106508875739644970414201183431",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p11・p13 減価償却",
+                  "D24:p63 企業結合",
+                  "D25:p72 固定資産明細",
+                  "M26:PDF p11–12 拠点・工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "gross_operating_investment": {
+                "value": "195.176804733727810650887573964497041420118343",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p24 設備計画",
+                  "S26:PDF p6・p11・p13 設備残高・支出・増加",
+                  "M26:PDF p11–12 関東支店・新工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "delta_operating_working_capital": {
+                "value": "80.9319832383712790146811594202898550724637681",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p6–7 BS・p4 支払条件変更",
+                  "M26:PDF p11–12 成長投資",
+                  "D25:p53 収益認識",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "after_tax_operating_cash_adjustments": {
+                "value": "-9.80",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p8・p11 特別利益・引当金",
+                  "D23:p44 特別利益",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              }
+            },
+            {
+              "period_id": "FY2029",
+              "discount_half_years": 6,
+              "ebit": {
+                "value": "340.945792861949588792",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p13 セグメント情報",
+                  "P26:PDF p27 受注高・受注残高",
+                  "M26:PDF p9・p11–15 成長戦略",
+                  "D25:p65 収益の分解",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "cash_tax_rate": {
+                "value": "0.35",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p64 税効果会計関係",
+                  "S26:PDF p8・p11 税とCF",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "depreciation": {
+                "value": "115.196175944279341960101046882111970869367319",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p11・p13 減価償却",
+                  "D24:p63 企業結合",
+                  "D25:p72 固定資産明細",
+                  "M26:PDF p11–12 拠点・工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "gross_operating_investment": {
+                "value": "280.573605461993627674101046882111970869367319",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p24 設備計画",
+                  "S26:PDF p6・p11・p13 設備残高・支出・増加",
+                  "M26:PDF p11–12 関東支店・新工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "delta_operating_working_capital": {
+                "value": "23.0836453126872646113188405797101449275362319",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p6–7 BS・p4 支払条件変更",
+                  "M26:PDF p11–12 成長投資",
+                  "D25:p53 収益認識",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "after_tax_operating_cash_adjustments": {
+                "value": "-5.60",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p8・p11 特別利益・引当金",
+                  "D23:p44 特別利益",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              }
+            },
+            {
+              "period_id": "FY2030",
+              "discount_half_years": 8,
+              "ebit": {
+                "value": "371.265060369954724487",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p13 セグメント情報",
+                  "P26:PDF p27 受注高・受注残高",
+                  "M26:PDF p9・p11–15 成長戦略",
+                  "D25:p65 収益の分解",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "cash_tax_rate": {
+                "value": "0.35",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p64 税効果会計関係",
+                  "S26:PDF p8・p11 税とCF",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "depreciation": {
+                "value": "136.014399968346933030270438710129197156962291",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p11・p13 減価償却",
+                  "D24:p63 企業結合",
+                  "D25:p72 固定資産明細",
+                  "M26:PDF p11–12 拠点・工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "gross_operating_investment": {
+                "value": "244.957906609992647316270438710129197156962291",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p24 設備計画",
+                  "S26:PDF p6・p11・p13 設備残高・支出・増加",
+                  "M26:PDF p11–12 関東支店・新工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "delta_operating_working_capital": {
+                "value": "57.5226984228677242326376811594202898550724638",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p6–7 BS・p4 支払条件変更",
+                  "M26:PDF p11–12 成長投資",
+                  "D25:p53 収益認識",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "after_tax_operating_cash_adjustments": {
+                "value": "-3.50",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p8・p11 特別利益・引当金",
+                  "D23:p44 特別利益",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              }
+            },
+            {
+              "period_id": "FY2031",
+              "discount_half_years": 10,
+              "ebit": {
+                "value": "405.016726012594660925",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p13 セグメント情報",
+                  "P26:PDF p27 受注高・受注残高",
+                  "M26:PDF p9・p11–15 成長戦略",
+                  "D25:p65 収益の分解",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "cash_tax_rate": {
+                "value": "0.35",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p64 税効果会計関係",
+                  "S26:PDF p8・p11 税とCF",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "depreciation": {
+                "value": "154.313284408651243606542813896302919796494951",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p11・p13 減価償却",
+                  "D24:p63 企業結合",
+                  "D25:p72 固定資産明細",
+                  "M26:PDF p11–12 拠点・工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "gross_operating_investment": {
+                "value": "108.481563774606900749542813896302919796494951",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p24 設備計画",
+                  "S26:PDF p6・p11・p13 設備残高・支出・増加",
+                  "M26:PDF p11–12 関東支店・新工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "delta_operating_working_capital": {
+                "value": "80.4772430623782064006376811594202898550724638",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p6–7 BS・p4 支払条件変更",
+                  "M26:PDF p11–12 成長投資",
+                  "D25:p53 収益認識",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "after_tax_operating_cash_adjustments": {
+                "value": "-2.80",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p8・p11 特別利益・引当金",
+                  "D23:p44 特別利益",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              }
+            },
+            {
+              "period_id": "FY2032",
+              "discount_half_years": 12,
+              "ebit": {
+                "value": "426.282033333314272286",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p13 セグメント情報",
+                  "P26:PDF p27 受注高・受注残高",
+                  "M26:PDF p9・p11–15 成長戦略",
+                  "D25:p65 収益の分解",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "cash_tax_rate": {
+                "value": "0.35",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p64 税効果会計関係",
+                  "S26:PDF p8・p11 税とCF",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "depreciation": {
+                "value": "162.757948458560429392472477572657215149801867",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p11・p13 減価償却",
+                  "D24:p63 企業結合",
+                  "D25:p72 固定資産明細",
+                  "M26:PDF p11–12 拠点・工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "gross_operating_investment": {
+                "value": "153.396719380054116249472477572657215149801867",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p24 設備計画",
+                  "S26:PDF p6・p11・p13 設備残高・支出・増加",
+                  "M26:PDF p11–12 関東支店・新工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "delta_operating_working_capital": {
+                "value": "55.2937548773093928333188405797101449275362318",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p6–7 BS・p4 支払条件変更",
+                  "M26:PDF p11–12 成長投資",
+                  "D25:p53 収益認識",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "after_tax_operating_cash_adjustments": {
+                "value": "0.00",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p8・p11 特別利益・引当金",
+                  "D23:p44 特別利益",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              }
+            },
+            {
+              "period_id": "FY2033",
+              "discount_half_years": 14,
+              "ebit": {
+                "value": "409.033550692917510063",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p13 セグメント情報",
+                  "P26:PDF p27 受注高・受注残高",
+                  "M26:PDF p9・p11–15 成長戦略",
+                  "D25:p65 収益の分解",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "cash_tax_rate": {
+                "value": "0.35",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p64 税効果会計関係",
+                  "S26:PDF p8・p11 税とCF",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "depreciation": {
+                "value": "184.722675450912650684622089506912171326694462",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p11・p13 減価償却",
+                  "D24:p63 企業結合",
+                  "D25:p72 固定資産明細",
+                  "M26:PDF p11–12 拠点・工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "gross_operating_investment": {
+                "value": "189.917385239690749518622089506912171326694462",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p24 設備計画",
+                  "S26:PDF p6・p11・p13 設備残高・支出・増加",
+                  "M26:PDF p11–12 関東支店・新工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "delta_operating_working_capital": {
+                "value": "28.3393916070673967243188405797101449275362314",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p6–7 BS・p4 支払条件変更",
+                  "M26:PDF p11–12 成長投資",
+                  "D25:p53 収益認識",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "after_tax_operating_cash_adjustments": {
+                "value": "0.00",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p8・p11 特別利益・引当金",
+                  "D23:p44 特別利益",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              }
+            }
+          ],
+          "terminal": {
+            "nopat": {
+              "value": "267.201166990148363449",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "G27:PDF p1 FY2027連結会社予想",
+                "A26:PDF p1–3 製品補完・業績・日程",
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+              ]
+            },
+            "growth": {
+              "value": "0.005",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "M26:PDF p8–9 中期計画",
+                "D25:p15–17 事業リスク"
+              ]
+            },
+            "roic": {
+              "value": "0.0681855492053355379489842110085142525869099389",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p6–7 親会社BS",
+                "M26:PDF p11–12 投資計画"
+              ]
+            }
+          }
+        }
+      },
+      "equity": {
+        "shares_outstanding_millions": {
+          "value": "1.835",
+          "basis": "DERIVED",
+          "evidence_refs": [
+            "S26:PDF p2 発行済株式・自己株式"
+          ]
+        },
+        "adjustments": {
+          "non_operating_cash": {
+            "amount": {
+              "value": "729.328",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "GROUP_EXCESS_CASH_POST_SETTLEMENT"
+            ],
+            "included_in_enterprise_value": false
+          },
+          "other_non_operating_assets": {
+            "amount": {
+              "value": "133.00",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "PARENT_EXTERNAL_BONDS"
+            ],
+            "included_in_enterprise_value": false
+          },
+          "interest_bearing_debt": {
+            "amount": {
+              "value": "80",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "GODAI_ASSUMED_EXTERNAL_BORROWINGS"
+            ],
+            "included_in_enterprise_value": false
+          },
+          "lease_debt": {
+            "amount": {
+              "value": "10",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "GODAI_ASSUMED_FINANCE_LEASES"
+            ],
+            "included_in_enterprise_value": false
+          },
+          "pension_claims": {
+            "amount": {
+              "value": "241.6",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "PARENT_RETIREMENT",
+              "GODAI_ASSUMED_RETIREMENT"
+            ],
+            "included_in_enterprise_value": false
+          },
+          "preferred_claims": {
+            "amount": {
+              "value": "0",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "GROUP_PREFERRED"
+            ],
+            "included_in_enterprise_value": false
+          },
+          "nci": {
+            "amount": {
+              "value": "0",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "GROUP_NCI"
+            ],
+            "included_in_enterprise_value": false
+          },
+          "other_claims": {
+            "amount": {
+              "value": "145.972580159464752",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "PARENT_CURRENT_TAX",
+              "PARENT_NET_DTL",
+              "GODAI_ASSUMED_TAX_CLAIM",
+              "PARENT_OPTIONS_VALUE_ALLOWANCE"
+            ],
+            "included_in_enterprise_value": false
+          }
+        }
+      },
+      "rationales": {
+        "fcff.schedule.periods.0.ebit": "FY2027連結EBIT=親会社既存333.732295849263605848+Godai取得のれん償却前・物理償却後営業利益-25−取得のれん償却8−統合費8。内部売上の対応費用を同額消去、未実現内部利益は重要性小と仮定。会社連結予想に加算していない。",
+        "fcff.schedule.periods.0.cash_tax_rate": "親会社既存0.35を両社の正の課税営業利益へ適用する研究税率。Godai損失即時通算せず別CF調整。のれん償却の税便益は認めない。",
+        "fcff.schedule.periods.0.depreciation": "親会社67.818205714285714286+Godai物理償却9.7692307692307692307692307692307692307692308+取得のれん償却8。物理資産初期56/7を年98%残存、設備投資7年・取得年半期償却、維持投資=物理償却を同時に解く。",
+        "fcff.schedule.periods.0.gross_operating_investment": "親会社既存CAPEX103+Godai維持9.7692307692307692307692307692307692307692308+成長15。対価93と取得費用を含まない。工場/関東支店は親会社計画に一度だけ含む。",
+        "fcff.schedule.periods.0.delta_operating_working_capital": "親会社既存増減30.665513501007347328+Godai-13.2608695652173913043478260869565217391304348。Godai期末=売上120×営業NWC比率.50+必要現金21.7391304347826086956521739130434782608695652。初期は仮定取得BSの営業NWC70+必要現金25。内部債権債務両側の同額消去は純額変化ゼロ。残取得費用は7/31営業未払金に含むと仮定しt0支払で初期NWCを増やすため、FY2027の親会社deltaから残費用を一度減算。",
+        "fcff.schedule.periods.0.after_tax_operating_cash_adjustments": "既存親会社調整0−税率×非損金のれん償却2.80+Godai赤字の即時税便益取消-11.55。統合費は既にEBIT控除、二重控除なし。繰越欠損金の追加便益は未評価。",
+        "fcff.schedule.periods.1.ebit": "FY2028連結EBIT=親会社既存336.165464240827901706+Godai取得のれん償却前・物理償却後営業利益-15−取得のれん償却8−統合費5。内部売上の対応費用を同額消去、未実現内部利益は重要性小と仮定。会社連結予想に加算していない。",
+        "fcff.schedule.periods.1.cash_tax_rate": "親会社既存0.35を両社の正の課税営業利益へ適用する研究税率。Godai損失即時通算せず別CF調整。のれん償却の税便益は認めない。",
+        "fcff.schedule.periods.1.depreciation": "親会社76.3278416+Godai物理償却13.1768047337278106508875739644970414201183431+取得のれん償却8。物理資産初期56/7を年98%残存、設備投資7年・取得年半期償却、維持投資=物理償却を同時に解く。",
+        "fcff.schedule.periods.1.gross_operating_investment": "親会社既存CAPEX170+Godai維持13.1768047337278106508875739644970414201183431+成長12。対価93と取得費用を含まない。工場/関東支店は親会社計画に一度だけ含む。",
+        "fcff.schedule.periods.1.delta_operating_working_capital": "親会社既存増減84.337780339820554377+Godai-3.4057971014492753623188405797101449275362319。Godai期末=売上115×営業NWC比率.50+必要現金20.8333333333333333333333333333333333333333333。初期は仮定取得BSの営業NWC70+必要現金25。内部債権債務両側の同額消去は純額変化ゼロ。残取得費用は7/31営業未払金に含むと仮定しt0支払で初期NWCを増やすため、FY2027の親会社deltaから残費用を一度減算。",
+        "fcff.schedule.periods.1.after_tax_operating_cash_adjustments": "既存親会社調整0−税率×非損金のれん償却2.80+Godai赤字の即時税便益取消-7.00。統合費は既にEBIT控除、二重控除なし。繰越欠損金の追加便益は未評価。",
+        "fcff.schedule.periods.2.ebit": "FY2029連結EBIT=親会社既存356.945792861949588792+Godai取得のれん償却前・物理償却後営業利益-5−取得のれん償却8−統合費3。内部売上の対応費用を同額消去、未実現内部利益は重要性小と仮定。会社連結予想に加算していない。",
+        "fcff.schedule.periods.2.cash_tax_rate": "親会社既存0.35を両社の正の課税営業利益へ適用する研究税率。Godai損失即時通算せず別CF調整。のれん償却の税便益は認めない。",
+        "fcff.schedule.periods.2.depreciation": "親会社90.622570482285714286+Godai物理償却16.5736054619936276741010468821119708693673190+取得のれん償却8。物理資産初期56/7を年98%残存、設備投資7年・取得年半期償却、維持投資=物理償却を同時に解く。",
+        "fcff.schedule.periods.2.gross_operating_investment": "親会社既存CAPEX256+Godai維持16.5736054619936276741010468821119708693673190+成長8。対価93と取得費用を含まない。工場/関東支店は親会社計画に一度だけ含む。",
+        "fcff.schedule.periods.2.delta_operating_working_capital": "親会社既存増減19.677848211237989249+Godai3.4057971014492753623188405797101449275362319。Godai期末=売上120×営業NWC比率.50+必要現金21.7391304347826086956521739130434782608695652。初期は仮定取得BSの営業NWC70+必要現金25。内部債権債務両側の同額消去は純額変化ゼロ。残取得費用は7/31営業未払金に含むと仮定しt0支払で初期NWCを増やすため、FY2027の親会社deltaから残費用を一度減算。",
+        "fcff.schedule.periods.2.after_tax_operating_cash_adjustments": "既存親会社調整0−税率×非損金のれん償却2.80+Godai赤字の即時税便益取消-2.80。統合費は既にEBIT控除、二重控除なし。繰越欠損金の追加便益は未評価。",
+        "fcff.schedule.periods.3.ebit": "FY2030連結EBIT=親会社既存381.265060369954724487+Godai取得のれん償却前・物理償却後営業利益0−取得のれん償却8−統合費2。内部売上の対応費用を同額消去、未実現内部利益は重要性小と仮定。会社連結予想に加算していない。",
+        "fcff.schedule.periods.3.cash_tax_rate": "親会社既存0.35を両社の正の課税営業利益へ適用する研究税率。Godai損失即時通算せず別CF調整。のれん償却の税便益は認めない。",
+        "fcff.schedule.periods.3.depreciation": "親会社108.056493358354285714+Godai物理償却19.9579066099926473162704387101291971569622912+取得のれん償却8。物理資産初期56/7を年98%残存、設備投資7年・取得年半期償却、維持投資=物理償却を同時に解く。",
+        "fcff.schedule.periods.3.gross_operating_investment": "親会社既存CAPEX220+Godai維持19.9579066099926473162704387101291971569622912+成長5。対価93と取得費用を含まない。工場/関東支店は親会社計画に一度だけ含む。",
+        "fcff.schedule.periods.3.delta_operating_working_capital": "親会社既存増減50.711104219969173508+Godai6.8115942028985507246376811594202898550724638。Godai期末=売上130×営業NWC比率.50+必要現金23.5507246376811594202898550724637681159420290。初期は仮定取得BSの営業NWC70+必要現金25。内部債権債務両側の同額消去は純額変化ゼロ。残取得費用は7/31営業未払金に含むと仮定しt0支払で初期NWCを増やすため、FY2027の親会社deltaから残費用を一度減算。",
+        "fcff.schedule.periods.3.after_tax_operating_cash_adjustments": "既存親会社調整0−税率×非損金のれん償却2.80+Godai赤字の即時税便益取消-0.70。統合費は既にEBIT控除、二重控除なし。繰越欠損金の追加便益は未評価。",
+        "fcff.schedule.periods.4.ebit": "FY2031連結EBIT=親会社既存410.016726012594660925+Godai取得のれん償却前・物理償却後営業利益4−取得のれん償却8−統合費1。内部売上の対応費用を同額消去、未実現内部利益は重要性小と仮定。会社連結予想に加算していない。",
+        "fcff.schedule.periods.4.cash_tax_rate": "親会社既存0.35を両社の正の課税営業利益へ適用する研究税率。Godai損失即時通算せず別CF調整。のれん償却の税便益は認めない。",
+        "fcff.schedule.periods.4.depreciation": "親会社122.831720634044342857+Godai物理償却23.4815637746069007495428138963029197964949514+取得のれん償却8。物理資産初期56/7を年98%残存、設備投資7年・取得年半期償却、維持投資=物理償却を同時に解く。",
+        "fcff.schedule.periods.4.gross_operating_investment": "親会社既存CAPEX82+Godai維持23.4815637746069007495428138963029197964949514+成長3。対価93と取得費用を含まない。工場/関東支店は親会社計画に一度だけ含む。",
+        "fcff.schedule.periods.4.delta_operating_working_capital": "親会社既存増減73.665648859479655676+Godai6.8115942028985507246376811594202898550724638。Godai期末=売上140×営業NWC比率.50+必要現金25.3623188405797101449275362318840579710144928。初期は仮定取得BSの営業NWC70+必要現金25。内部債権債務両側の同額消去は純額変化ゼロ。残取得費用は7/31営業未払金に含むと仮定しt0支払で初期NWCを増やすため、FY2027の親会社deltaから残費用を一度減算。",
+        "fcff.schedule.periods.4.after_tax_operating_cash_adjustments": "既存親会社調整0−税率×非損金のれん償却2.80+Godai赤字の即時税便益取消0.00。統合費は既にEBIT控除、二重控除なし。繰越欠損金の追加便益は未評価。",
+        "fcff.schedule.periods.5.ebit": "FY2032連結EBIT=親会社既存420.282033333314272286+Godai取得のれん償却前・物理償却後営業利益6−取得のれん償却0−統合費0。内部売上の対応費用を同額消去、未実現内部利益は重要性小と仮定。会社連結予想に加算していない。",
+        "fcff.schedule.periods.5.cash_tax_rate": "親会社既存0.35を両社の正の課税営業利益へ適用する研究税率。Godai損失即時通算せず別CF調整。のれん償却の税便益は認めない。",
+        "fcff.schedule.periods.5.depreciation": "親会社135.361229078506313143+Godai物理償却27.3967193800541162494724775726572151498018670+取得のれん償却0。物理資産初期56/7を年98%残存、設備投資7年・取得年半期償却、維持投資=物理償却を同時に解く。",
+        "fcff.schedule.periods.5.gross_operating_investment": "親会社既存CAPEX123+Godai維持27.3967193800541162494724775726572151498018670+成長3。対価93と取得費用を含まない。工場/関東支店は親会社計画に一度だけ含む。",
+        "fcff.schedule.periods.5.delta_operating_working_capital": "親会社既存増減51.887957775860117471+Godai3.4057971014492753623188405797101449275362318。Godai期末=売上145×営業NWC比率.50+必要現金26.2681159420289855072463768115942028985507246。初期は仮定取得BSの営業NWC70+必要現金25。内部債権債務両側の同額消去は純額変化ゼロ。残取得費用は7/31営業未払金に含むと仮定しt0支払で初期NWCを増やすため、FY2027の親会社deltaから残費用を一度減算。",
+        "fcff.schedule.periods.5.after_tax_operating_cash_adjustments": "既存親会社調整0−税率×非損金のれん償却0.00+Godai赤字の即時税便益取消0.00。統合費は既にEBIT控除、二重控除なし。繰越欠損金の追加便益は未評価。",
+        "fcff.schedule.periods.6.ebit": "FY2033連結EBIT=親会社既存401.533550692917510063+Godai取得のれん償却前・物理償却後営業利益7.5−取得のれん償却0−統合費0。内部売上の対応費用を同額消去、未実現内部利益は重要性小と仮定。会社連結予想に加算していない。",
+        "fcff.schedule.periods.6.cash_tax_rate": "親会社既存0.35を両社の正の課税営業利益へ適用する研究税率。Godai損失即時通算せず別CF調整。のれん償却の税便益は認めない。",
+        "fcff.schedule.periods.6.depreciation": "親会社152.805290211221901166+Godai物理償却31.9173852396907495186220895069121713266944620+取得のれん償却0。物理資産初期56/7を年98%残存、設備投資7年・取得年半期償却、維持投資=物理償却を同時に解く。",
+        "fcff.schedule.periods.6.gross_operating_investment": "親会社既存CAPEX155+Godai維持31.9173852396907495186220895069121713266944620+成長3。対価93と取得費用を含まない。工場/関東支店は親会社計画に一度だけ含む。",
+        "fcff.schedule.periods.6.delta_operating_working_capital": "親会社既存増減24.933594505618121362+Godai3.4057971014492753623188405797101449275362314。Godai期末=売上150×営業NWC比率.50+必要現金27.1739130434782608695652173913043478260869565。初期は仮定取得BSの営業NWC70+必要現金25。内部債権債務両側の同額消去は純額変化ゼロ。残取得費用は7/31営業未払金に含むと仮定しt0支払で初期NWCを増やすため、FY2027の親会社deltaから残費用を一度減算。",
+        "fcff.schedule.periods.6.after_tax_operating_cash_adjustments": "既存親会社調整0−税率×非損金のれん償却0.00+Godai赤字の即時税便益取消0.00。統合費は既にEBIT控除、二重控除なし。繰越欠損金の追加便益は未評価。",
+        "fcff.schedule.terminal.nopat": "FY2034経済NOPAT=親会社旧終価NOPAT262.301791990148363449+GodaiFY2033償却前営業利益7.5×(1+g)×(1−税率)。取得のれんは非現金・税非控除のため除外、追加相乗効果なし。",
+        "fcff.schedule.terminal.growth": "既存シナリオ成長率をグループへ適用。ゴダイが永久に親会社より高成長とはしない。",
+        "fcff.schedule.terminal.roic": "経済NOPAT267.201166990148363449/FY2033連結営業投下資本3918.73600937777294839056521739130434782608696。取得原価のれん40を資本に残し、簿価償却だけによるROIC改善を排除。再投資=g×投下資本=19.5936800468888647419528260869565217391304348。",
+        "fcff.discount_rate": "目標D/V=0の研究仮定。円10年国債2.801%+推定beta1.4×ERP5.0%+規模・流動性調整0.022を0.1bp以内で丸め0.12。betaは薄商いの価格回帰で実測した値ではなく、設備循環・保守構成・集中度からの仮定。ERP5%は日本のNYU推計4.69–5.14%を参照した判断であり、2026-07-31観測値とはしない。8–12%感応度を併記。 取得規模は小さく追加の精密な子会社betaを推計せず、この連結シナリオにも同じ率を使用。",
+        "equity.shares_outstanding_millions": "7/31発行1.920−自己0.085=1.835百万株を8/1直後へ一日近似。現金取得で本件の新株なし。潜在株式は元シナリオの価値引当のみ、分母は二重希薄化しない。",
+        "equity.adjustments.non_operating_cash.amount": "親会社現金同等物1623.204−既存必要現金800−取得対価93−未払取得費用仮定5.876+Godai現金30−Godai必要現金25=729.328。親会社定期預金34.931は既存営業現金側に残す。",
+        "equity.adjustments.other_non_operating_assets.amount": "外部債券140×既存掛目0.95のみ。Godai株式/契約権利は連結消去。持分法投資・Godai金融資産を別途加算しない（仮定BSでは資産全額を営業資産/現金に配分）。",
+        "equity.adjustments.interest_bearing_debt.amount": "親会社公表借入ゼロ+Godai仮定80。総負債153の一部のみ。価格から借入を推定したものではない。",
+        "equity.adjustments.lease_debt.amount": "親会社認識リースゼロ+Godai仮定10。Godai償却・CAPEXに資産効果を含め、リース元本CFは別途FCFFに引かない。未認識営業賃借は既存営業費に含む仮定。",
+        "equity.adjustments.pension_claims.amount": "親会社233.600+Godai仮定8。不足額を請求権として一度控除、過去勤務分の支払をFCFFに再控除しない。",
+        "equity.adjustments.preferred_claims.amount": "親会社普通株のみ、Godai取得開示の全株取得に優先請求の記載なし。対象会社に別途優先請求なしという明示的条件で0。新規判明時に控除。",
+        "equity.adjustments.nci.amount": "Godai議決権100%取得。対象範囲は親会社とGodaiのみ、Godai傘下に少数持分子会社なしという条件で0。",
+        "equity.adjustments.other_claims.amount": "親会社税119.893+2.651+Godai仮定税5+既存オプション価値引当18.428580159464752。取得対価93は支払済みのため請求権から除去。取得費用は現金からのみ処理。PPA税はnetの資産調整に含む条件で追加DTLなし。"
+      },
+      "claimed_results": {
+        "enterprise_value": "1507.86724777675519842343235476213746449728674",
+        "equity_value": "1892.62266761729044642343235476213746449728674",
+        "value_per_share": "1031.40199870152067924982689632814030762794918"
+      }
+    },
+    {
+      "scenario_id": "UPSIDE",
+      "fcff": {
+        "valuation_as_of": "2026-08-01",
+        "discount_rate": {
+          "value": "0.085",
+          "basis": "ANALYST_ASSUMPTION",
+          "evidence_refs": [
+            "JGB:R8.7.31行 10年2.801%",
+            "ERP:Japan行 5.14%・CDSベース4.69%",
+            "M26:PDF p18 流動性改善方針",
+            "NSE:2026-07-31 普通株62250"
+          ]
+        },
+        "schedule": {
+          "schema_version": "fcff_schedule_request_v1",
+          "currency_unit": "JPY_MILLION",
+          "periods": [
+            {
+              "period_id": "FY2027",
+              "discount_half_years": 2,
+              "ebit": {
+                "value": "689.211894688793313795",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p13 セグメント情報",
+                  "P26:PDF p27 受注高・受注残高",
+                  "M26:PDF p9・p11–15 成長戦略",
+                  "D25:p65 収益の分解",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "cash_tax_rate": {
+                "value": "0.315",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p64 税効果会計関係",
+                  "S26:PDF p8・p11 税とCF",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "depreciation": {
+                "value": "83.5676345054945054940769230769230769230769230",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p11・p13 減価償却",
+                  "D24:p63 企業結合",
+                  "D25:p72 固定資産明細",
+                  "M26:PDF p11–12 拠点・工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "gross_operating_investment": {
+                "value": "260.487923076923076923076923076923076923076923",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p24 設備計画",
+                  "S26:PDF p6・p11・p13 設備残高・支出・増加",
+                  "M26:PDF p11–12 関東支店・新工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "delta_operating_working_capital": {
+                "value": "312.294710906020397379304347826086956521739130",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p6–7 BS・p4 支払条件変更",
+                  "M26:PDF p11–12 成長投資",
+                  "D25:p53 収益認識",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "after_tax_operating_cash_adjustments": {
+                "value": "0.000",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p8・p11 特別利益・引当金",
+                  "D23:p44 特別利益",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              }
+            },
+            {
+              "period_id": "FY2028",
+              "discount_half_years": 4,
+              "ebit": {
+                "value": "822.905316233013618184",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p13 セグメント情報",
+                  "P26:PDF p27 受注高・受注残高",
+                  "M26:PDF p9・p11–15 成長戦略",
+                  "D25:p65 収益の分解",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "cash_tax_rate": {
+                "value": "0.315",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p64 税効果会計関係",
+                  "S26:PDF p8・p11 税とCF",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "depreciation": {
+                "value": "115.602764271174978866857988165680473372781065",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p11・p13 減価償却",
+                  "D24:p63 企業結合",
+                  "D25:p72 固定資産明細",
+                  "M26:PDF p11–12 拠点・工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "gross_operating_investment": {
+                "value": "492.654911242603550295857988165680473372781065",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p24 設備計画",
+                  "S26:PDF p6・p11・p13 設備残高・支出・増加",
+                  "M26:PDF p11–12 関東支店・新工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "delta_operating_working_capital": {
+                "value": "235.966737396702755156130434782608695652173913",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p6–7 BS・p4 支払条件変更",
+                  "M26:PDF p11–12 成長投資",
+                  "D25:p53 収益認識",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "after_tax_operating_cash_adjustments": {
+                "value": "0.000",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p8・p11 特別利益・引当金",
+                  "D23:p44 特別利益",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              }
+            },
+            {
+              "period_id": "FY2029",
+              "discount_half_years": 6,
+              "ebit": {
+                "value": "957.778797403528091482",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p13 セグメント情報",
+                  "P26:PDF p27 受注高・受注残高",
+                  "M26:PDF p9・p11–15 成長戦略",
+                  "D25:p65 収益の分解",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "cash_tax_rate": {
+                "value": "0.315",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p64 税効果会計関係",
+                  "S26:PDF p8・p11 税とCF",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "depreciation": {
+                "value": "160.520112465509591001143832498862084660901229",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p11・p13 減価償却",
+                  "D24:p63 企業結合",
+                  "D25:p72 固定資産明細",
+                  "M26:PDF p11–12 拠点・工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "gross_operating_investment": {
+                "value": "519.248959126081019572143832498862084660901229",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p24 設備計画",
+                  "S26:PDF p6・p11・p13 設備残高・支出・増加",
+                  "M26:PDF p11–12 関東支店・新工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "delta_operating_working_capital": {
+                "value": "239.638586885488242258130434782608695652173912",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p6–7 BS・p4 支払条件変更",
+                  "M26:PDF p11–12 成長投資",
+                  "D25:p53 収益認識",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "after_tax_operating_cash_adjustments": {
+                "value": "0.000",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p8・p11 特別利益・引当金",
+                  "D23:p44 特別利益",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              }
+            },
+            {
+              "period_id": "FY2030",
+              "discount_half_years": 8,
+              "ebit": {
+                "value": "1077.493751578773327969",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p13 セグメント情報",
+                  "P26:PDF p27 受注高・受注残高",
+                  "M26:PDF p9・p11–15 成長戦略",
+                  "D25:p65 収益の分解",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "cash_tax_rate": {
+                "value": "0.315",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p64 税効果会計関係",
+                  "S26:PDF p8・p11 税とCF",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "depreciation": {
+                "value": "198.157741229107110495473652883302405377962956",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p11・p13 減価償却",
+                  "D24:p63 企業結合",
+                  "D25:p72 固定資産明細",
+                  "M26:PDF p11–12 拠点・工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "gross_operating_investment": {
+                "value": "302.938379299324253352473652883302405377962956",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p24 設備計画",
+                  "S26:PDF p6・p11・p13 設備残高・支出・増加",
+                  "M26:PDF p11–12 関東支店・新工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "delta_operating_working_capital": {
+                "value": "234.013742207347179753130434782608695652173914",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p6–7 BS・p4 支払条件変更",
+                  "M26:PDF p11–12 成長投資",
+                  "D25:p53 収益認識",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "after_tax_operating_cash_adjustments": {
+                "value": "0.000",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p8・p11 特別利益・引当金",
+                  "D23:p44 特別利益",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              }
+            },
+            {
+              "period_id": "FY2031",
+              "discount_half_years": 10,
+              "ebit": {
+                "value": "1183.844423938775652297",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p13 セグメント情報",
+                  "P26:PDF p27 受注高・受注残高",
+                  "M26:PDF p9・p11–15 成長戦略",
+                  "D25:p65 収益の分解",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "cash_tax_rate": {
+                "value": "0.315",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p64 税効果会計関係",
+                  "S26:PDF p8・p11 税とCF",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "depreciation": {
+                "value": "230.333727647989909912623445634579698513034181",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p11・p13 減価償却",
+                  "D24:p63 企業結合",
+                  "D25:p72 固定資産明細",
+                  "M26:PDF p11–12 拠点・工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "gross_operating_investment": {
+                "value": "239.506995585374138483623445634579698513034181",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p24 設備計画",
+                  "S26:PDF p6・p11・p13 設備残高・支出・増加",
+                  "M26:PDF p11–12 関東支店・新工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "delta_operating_working_capital": {
+                "value": "233.378342257129119096217391304347826086956521",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p6–7 BS・p4 支払条件変更",
+                  "M26:PDF p11–12 成長投資",
+                  "D25:p53 収益認識",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "after_tax_operating_cash_adjustments": {
+                "value": "0.000",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p8・p11 特別利益・引当金",
+                  "D23:p44 特別利益",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              }
+            },
+            {
+              "period_id": "FY2032",
+              "discount_half_years": 12,
+              "ebit": {
+                "value": "1212.966739198778925897",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p13 セグメント情報",
+                  "P26:PDF p27 受注高・受注残高",
+                  "M26:PDF p9・p11–15 成長戦略",
+                  "D25:p65 収益の分解",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "cash_tax_rate": {
+                "value": "0.315",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p64 税効果会計関係",
+                  "S26:PDF p8・p11 税とCF",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "depreciation": {
+                "value": "265.875901747379769634950129578361190591962516",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p11・p13 減価償却",
+                  "D24:p63 企業結合",
+                  "D25:p72 固定資産明細",
+                  "M26:PDF p11–12 拠点・工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "gross_operating_investment": {
+                "value": "308.705375526016313634950129578361190591962516",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p24 設備計画",
+                  "S26:PDF p6・p11・p13 設備残高・支出・増加",
+                  "M26:PDF p11–12 関東支店・新工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "delta_operating_working_capital": {
+                "value": "163.012955969458221378086956521739130434782609",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p6–7 BS・p4 支払条件変更",
+                  "M26:PDF p11–12 成長投資",
+                  "D25:p53 収益認識",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "after_tax_operating_cash_adjustments": {
+                "value": "0.000",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p8・p11 特別利益・引当金",
+                  "D23:p44 特別利益",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              }
+            },
+            {
+              "period_id": "FY2033",
+              "discount_half_years": 14,
+              "ebit": {
+                "value": "1169.119750222990586565",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p13 セグメント情報",
+                  "P26:PDF p27 受注高・受注残高",
+                  "M26:PDF p9・p11–15 成長戦略",
+                  "D25:p65 収益の分解",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "cash_tax_rate": {
+                "value": "0.315",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p64 税効果会計関係",
+                  "S26:PDF p8・p11 税とCF",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "depreciation": {
+                "value": "310.339422232176285029788611051955219913802903",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p11・p13 減価償却",
+                  "D24:p63 企業結合",
+                  "D25:p72 固定資産明細",
+                  "M26:PDF p11–12 拠点・工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "gross_operating_investment": {
+                "value": "368.553406306668669578788611051955219913802903",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "D25:p24 設備計画",
+                  "S26:PDF p6・p11・p13 設備残高・支出・増加",
+                  "M26:PDF p11–12 関東支店・新工場",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "delta_operating_working_capital": {
+                "value": "81.178867400545510088173913043478260869565217",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p6–7 BS・p4 支払条件変更",
+                  "M26:PDF p11–12 成長投資",
+                  "D25:p53 収益認識",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              },
+              "after_tax_operating_cash_adjustments": {
+                "value": "0.000",
+                "basis": "ANALYST_ASSUMPTION",
+                "evidence_refs": [
+                  "S26:PDF p8・p11 特別利益・引当金",
+                  "D23:p44 特別利益",
+                  "G27:PDF p1 FY2027連結会社予想",
+                  "A26:PDF p1–3 製品補完・業績・日程",
+                  "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                  "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+                ]
+              }
+            }
+          ],
+          "terminal": {
+            "nopat": {
+              "value": "816.863969480803522833",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "G27:PDF p1 FY2027連結会社予想",
+                "A26:PDF p1–3 製品補完・業績・日程",
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定"
+              ]
+            },
+            "growth": {
+              "value": "0.02",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "M26:PDF p8–9 中期計画",
+                "D25:p15–17 事業リスク"
+              ]
+            },
+            "roic": {
+              "value": "0.150084642196634158220805497822840528745133694",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p6–7 親会社BS",
+                "M26:PDF p11–12 投資計画"
+              ]
+            }
+          }
+        }
+      },
+      "equity": {
+        "shares_outstanding_millions": {
+          "value": "1.835",
+          "basis": "DERIVED",
+          "evidence_refs": [
+            "S26:PDF p2 発行済株式・自己株式"
+          ]
+        },
+        "adjustments": {
+          "non_operating_cash": {
+            "amount": {
+              "value": "1025.204",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "GROUP_EXCESS_CASH_POST_SETTLEMENT"
+            ],
+            "included_in_enterprise_value": false
+          },
+          "other_non_operating_assets": {
+            "amount": {
+              "value": "140",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "PARENT_EXTERNAL_BONDS"
+            ],
+            "included_in_enterprise_value": false
+          },
+          "interest_bearing_debt": {
+            "amount": {
+              "value": "30",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "GODAI_ASSUMED_EXTERNAL_BORROWINGS"
+            ],
+            "included_in_enterprise_value": false
+          },
+          "lease_debt": {
+            "amount": {
+              "value": "2",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "GODAI_ASSUMED_FINANCE_LEASES"
+            ],
+            "included_in_enterprise_value": false
+          },
+          "pension_claims": {
+            "amount": {
+              "value": "235.6",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "PARENT_RETIREMENT",
+              "GODAI_ASSUMED_RETIREMENT"
+            ],
+            "included_in_enterprise_value": false
+          },
+          "preferred_claims": {
+            "amount": {
+              "value": "0",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "GROUP_PREFERRED"
+            ],
+            "included_in_enterprise_value": false
+          },
+          "nci": {
+            "amount": {
+              "value": "0",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "GROUP_NCI"
+            ],
+            "included_in_enterprise_value": false
+          },
+          "other_claims": {
+            "amount": {
+              "value": "141.047870520574612",
+              "basis": "ANALYST_ASSUMPTION",
+              "evidence_refs": [
+                "A26:PDF p2 ゴダイ過年度PL/BS・取得価格",
+                "S26:PDF p15–16 8月1日100%取得・PPA未確定",
+                "S26:PDF p2・6–7 株数・BS",
+                "D25:p25 新株予約権"
+              ]
+            },
+            "economic_scope_ids": [
+              "PARENT_CURRENT_TAX",
+              "PARENT_NET_DTL",
+              "GODAI_ASSUMED_TAX_CLAIM",
+              "PARENT_OPTIONS_VALUE_ALLOWANCE"
+            ],
+            "included_in_enterprise_value": false
+          }
+        }
+      },
+      "rationales": {
+        "fcff.schedule.periods.0.ebit": "FY2027連結EBIT=親会社既存679.211894688793313795+Godai取得のれん償却前・物理償却後営業利益12−取得のれん償却0−統合費2。内部売上の対応費用を同額消去、未実現内部利益は重要性小と仮定。会社連結予想に加算していない。",
+        "fcff.schedule.periods.0.cash_tax_rate": "親会社既存0.315を両社の正の課税営業利益へ適用する研究税率。Godai損失即時通算せず別CF調整。のれん償却の税便益は認めない。",
+        "fcff.schedule.periods.0.depreciation": "親会社72.490711428571428571+Godai物理償却11.0769230769230769230769230769230769230769230+取得のれん償却0。物理資産初期66/7を年98%残存、設備投資7年・取得年半期償却、維持投資=物理償却を同時に解く。",
+        "fcff.schedule.periods.0.gross_operating_investment": "親会社既存CAPEX237.411+Godai維持11.0769230769230769230769230769230769230769230+成長12。対価93と取得費用を含まない。工場/関東支店は親会社計画に一度だけ含む。",
+        "fcff.schedule.periods.0.delta_operating_working_capital": "親会社既存増減261.816450036455179988+Godai50.4782608695652173913043478260869565217391304。Godai期末=売上170×営業NWC比率.30+必要現金18.4782608695652173913043478260869565217391304。初期は仮定取得BSの営業NWC4+必要現金15。内部債権債務両側の同額消去は純額変化ゼロ。残取得費用は7/31営業未払金に含むと仮定しt0支払で初期NWCを増やすため、FY2027の親会社deltaから残費用を一度減算。",
+        "fcff.schedule.periods.0.after_tax_operating_cash_adjustments": "既存親会社調整0−税率×非損金のれん償却0.000+Godai赤字の即時税便益取消0.000。統合費は既にEBIT控除、二重控除なし。繰越欠損金の追加便益は未評価。",
+        "fcff.schedule.periods.1.ebit": "FY2028連結EBIT=親会社既存802.905316233013618184+Godai取得のれん償却前・物理償却後営業利益21−取得のれん償却0−統合費1。内部売上の対応費用を同額消去、未実現内部利益は重要性小と仮定。会社連結予想に加算していない。",
+        "fcff.schedule.periods.1.cash_tax_rate": "親会社既存0.315を両社の正の課税営業利益へ適用する研究税率。Godai損失即時通算せず別CF調整。のれん償却の税便益は認めない。",
+        "fcff.schedule.periods.1.depreciation": "親会社100.947853028571428571+Godai物理償却14.6549112426035502958579881656804733727810651+取得のれん償却0。物理資産初期66/7を年98%残存、設備投資7年・取得年半期償却、維持投資=物理償却を同時に解く。",
+        "fcff.schedule.periods.1.gross_operating_investment": "親会社既存CAPEX463+Godai維持14.6549112426035502958579881656804733727810651+成長15。対価93と取得費用を含まない。工場/関東支店は親会社計画に一度だけ含む。",
+        "fcff.schedule.periods.1.delta_operating_working_capital": "親会社既存増減219.618911309746233417+Godai16.3478260869565217391304347826086956521739131。Godai期末=売上210×営業NWC比率.30+必要現金22.8260869565217391304347826086956521739130435。初期は仮定取得BSの営業NWC4+必要現金15。内部債権債務両側の同額消去は純額変化ゼロ。残取得費用は7/31営業未払金に含むと仮定しt0支払で初期NWCを増やすため、FY2027の親会社deltaから残費用を一度減算。",
+        "fcff.schedule.periods.1.after_tax_operating_cash_adjustments": "既存親会社調整0−税率×非損金のれん償却0.000+Godai赤字の即時税便益取消0.000。統合費は既にEBIT控除、二重控除なし。繰越欠損金の追加便益は未評価。",
+        "fcff.schedule.periods.2.ebit": "FY2029連結EBIT=親会社既存927.778797403528091482+Godai取得のれん償却前・物理償却後営業利益30−取得のれん償却0−統合費0。内部売上の対応費用を同額消去、未実現内部利益は重要性小と仮定。会社連結予想に加算していない。",
+        "fcff.schedule.periods.2.cash_tax_rate": "親会社既存0.315を両社の正の課税営業利益へ適用する研究税率。Godai損失即時通算せず別CF調整。のれん償却の税便益は認めない。",
+        "fcff.schedule.periods.2.depreciation": "親会社141.271153339428571429+Godai物理償却19.2489591260810195721438324988620846609012290+取得のれん償却0。物理資産初期66/7を年98%残存、設備投資7年・取得年半期償却、維持投資=物理償却を同時に解く。",
+        "fcff.schedule.periods.2.gross_operating_investment": "親会社既存CAPEX482+Godai維持19.2489591260810195721438324988620846609012290+成長18。対価93と取得費用を含まない。工場/関東支店は親会社計画に一度だけ含む。",
+        "fcff.schedule.periods.2.delta_operating_working_capital": "親会社既存増減223.290760798531720519+Godai16.3478260869565217391304347826086956521739125。Godai期末=売上250×営業NWC比率.30+必要現金27.1739130434782608695652173913043478260869565。初期は仮定取得BSの営業NWC4+必要現金15。内部債権債務両側の同額消去は純額変化ゼロ。残取得費用は7/31営業未払金に含むと仮定しt0支払で初期NWCを増やすため、FY2027の親会社deltaから残費用を一度減算。",
+        "fcff.schedule.periods.2.after_tax_operating_cash_adjustments": "既存親会社調整0−税率×非損金のれん償却0.000+Godai赤字の即時税便益取消0.000。統合費は既にEBIT控除、二重控除なし。繰越欠損金の追加便益は未評価。",
+        "fcff.schedule.periods.3.ebit": "FY2030連結EBIT=親会社既存1039.793751578773327969+Godai取得のれん償却前・物理償却後営業利益37.7−取得のれん償却0−統合費0。内部売上の対応費用を同額消去、未実現内部利益は重要性小と仮定。会社連結予想に加算していない。",
+        "fcff.schedule.periods.3.cash_tax_rate": "親会社既存0.315を両社の正の課税営業利益へ適用する研究税率。Godai損失即時通算せず別CF調整。のれん償却の税便益は認めない。",
+        "fcff.schedule.periods.3.depreciation": "親会社173.219361929782857143+Godai物理償却24.9383792993242533524736528833024053779629564+取得のれん償却0。物理資産初期66/7を年98%残存、設備投資7年・取得年半期償却、維持投資=物理償却を同時に解く。",
+        "fcff.schedule.periods.3.gross_operating_investment": "親会社既存CAPEX258+Godai維持24.9383792993242533524736528833024053779629564+成長20。対価93と取得費用を含まない。工場/関東支店は親会社計画に一度だけ含む。",
+        "fcff.schedule.periods.3.delta_operating_working_capital": "親会社既存増減217.665916120390658014+Godai16.347826086956521739130434782608695652173914。Godai期末=売上290×営業NWC比率.30+必要現金31.5217391304347826086956521739130434782608696。初期は仮定取得BSの営業NWC4+必要現金15。内部債権債務両側の同額消去は純額変化ゼロ。残取得費用は7/31営業未払金に含むと仮定しt0支払で初期NWCを増やすため、FY2027の親会社deltaから残費用を一度減算。",
+        "fcff.schedule.periods.3.after_tax_operating_cash_adjustments": "既存親会社調整0−税率×非損金のれん償却0.000+Godai赤字の即時税便益取消0.000。統合費は既にEBIT控除、二重控除なし。繰越欠損金の追加便益は未評価。",
+        "fcff.schedule.periods.4.ebit": "FY2031連結EBIT=親会社既存1138.204423938775652297+Godai取得のれん償却前・物理償却後営業利益45.64−取得のれん償却0−統合費0。内部売上の対応費用を同額消去、未実現内部利益は重要性小と仮定。会社連結予想に加算していない。",
+        "fcff.schedule.periods.4.cash_tax_rate": "親会社既存0.315を両社の正の課税営業利益へ適用する研究税率。Godai損失即時通算せず別CF調整。のれん償却の税便益は認めない。",
+        "fcff.schedule.periods.4.depreciation": "親会社198.826732062615771429+Godai物理償却31.5069955853741384836234456345796985130341806+取得のれん償却0。物理資産初期66/7を年98%残存、設備投資7年・取得年半期償却、維持投資=物理償却を同時に解く。",
+        "fcff.schedule.periods.4.gross_operating_investment": "親会社既存CAPEX190+Godai維持31.5069955853741384836234456345796985130341806+成長18。対価93と取得費用を含まない。工場/関東支店は親会社計画に一度だけ含む。",
+        "fcff.schedule.periods.4.delta_operating_working_capital": "親会社既存増減218.665298778868249531+Godai14.713043478260869565217391304347826086956521。Godai期末=売上326×営業NWC比率.30+必要現金35.4347826086956521739130434782608695652173913。初期は仮定取得BSの営業NWC4+必要現金15。内部債権債務両側の同額消去は純額変化ゼロ。残取得費用は7/31営業未払金に含むと仮定しt0支払で初期NWCを増やすため、FY2027の親会社deltaから残費用を一度減算。",
+        "fcff.schedule.periods.4.after_tax_operating_cash_adjustments": "既存親会社調整0−税率×非損金のれん償却0.000+Godai赤字の即時税便益取消0.000。統合費は既にEBIT控除、二重控除なし。繰越欠損金の追加便益は未評価。",
+        "fcff.schedule.periods.5.ebit": "FY2032連結EBIT=親会社既存1164.666739198778925897+Godai取得のれん償却前・物理償却後営業利益48.3−取得のれん償却0−統合費0。内部売上の対応費用を同額消去、未実現内部利益は重要性小と仮定。会社連結予想に加算していない。",
+        "fcff.schedule.periods.5.cash_tax_rate": "親会社既存0.315を両社の正の課税営業利益へ適用する研究税率。Godai損失即時通算せず別CF調整。のれん償却の税便益は認めない。",
+        "fcff.schedule.periods.5.depreciation": "親会社227.170526221363456+Godai物理償却38.7053755260163136349501295783611905919625161+取得のれん償却0。物理資産初期66/7を年98%残存、設備投資7年・取得年半期償却、維持投資=物理償却を同時に解く。",
+        "fcff.schedule.periods.5.gross_operating_investment": "親会社既存CAPEX255+Godai維持38.7053755260163136349501295783611905919625161+成長15。対価93と取得費用を含まない。工場/関東支店は親会社計画に一度だけ含む。",
+        "fcff.schedule.periods.5.delta_operating_working_capital": "親会社既存増減155.247738578153873552+Godai7.765217391304347826086956521739130434782609。Godai期末=売上345×営業NWC比率.30+必要現金37.5。初期は仮定取得BSの営業NWC4+必要現金15。内部債権債務両側の同額消去は純額変化ゼロ。残取得費用は7/31営業未払金に含むと仮定しt0支払で初期NWCを増やすため、FY2027の親会社deltaから残費用を一度減算。",
+        "fcff.schedule.periods.5.after_tax_operating_cash_adjustments": "既存親会社調整0−税率×非損金のれん償却0.000+Godai赤字の即時税便益取消0.000。統合費は既にEBIT控除、二重控除なし。繰越欠損金の追加便益は未評価。",
+        "fcff.schedule.periods.6.ebit": "FY2033連結EBIT=親会社既存1118.719750222990586565+Godai取得のれん償却前・物理償却後営業利益50.4−取得のれん償却0−統合費0。内部売上の対応費用を同額消去、未実現内部利益は重要性小と仮定。会社連結予想に加算していない。",
+        "fcff.schedule.periods.6.cash_tax_rate": "親会社既存0.315を両社の正の課税営業利益へ適用する研究税率。Godai損失即時通算せず別CF調整。のれん償却の税便益は認めない。",
+        "fcff.schedule.periods.6.depreciation": "親会社263.786015925507615451+Godai物理償却46.5534063066686695787886110519552199138029032+取得のれん償却0。物理資産初期66/7を年98%残存、設備投資7年・取得年半期償却、維持投資=物理償却を同時に解く。",
+        "fcff.schedule.periods.6.gross_operating_investment": "親会社既存CAPEX310+Godai維持46.5534063066686695787886110519552199138029032+成長12。対価93と取得費用を含まない。工場/関東支店は親会社計画に一度だけ含む。",
+        "fcff.schedule.periods.6.delta_operating_working_capital": "親会社既存増減75.048432617936814436+Godai6.130434782608695652173913043478260869565217。Godai期末=売上360×営業NWC比率.30+必要現金39.1304347826086956521739130434782608695652174。初期は仮定取得BSの営業NWC4+必要現金15。内部債権債務両側の同額消去は純額変化ゼロ。残取得費用は7/31営業未払金に含むと仮定しt0支払で初期NWCを増やすため、FY2027の親会社deltaから残費用を一度減算。",
+        "fcff.schedule.periods.6.after_tax_operating_cash_adjustments": "既存親会社調整0−税率×非損金のれん償却0.000+Godai赤字の即時税便益取消0.000。統合費は既にEBIT控除、二重控除なし。繰越欠損金の追加便益は未評価。",
+        "fcff.schedule.terminal.nopat": "FY2034経済NOPAT=親会社旧終価NOPAT781.649489480803522833+GodaiFY2033償却前営業利益50.4×(1+g)×(1−税率)。取得のれんは非現金・税非控除のため除外、追加相乗効果なし。",
+        "fcff.schedule.terminal.growth": "既存シナリオ成長率をグループへ適用。ゴダイが永久に親会社より高成長とはしない。",
+        "fcff.schedule.terminal.roic": "経済NOPAT816.863969480803522833/FY2033連結営業投下資本5442.68858908685029651417391304347826086956522。取得原価のれん0を資本に残し、簿価償却だけによるROIC改善を排除。再投資=g×投下資本=108.853771781737005930283478260869565217391304。",
+        "fcff.discount_rate": "目標D/V=0の研究仮定。円10年国債2.801%+推定beta1×ERP5.0%+規模・流動性調整0.007を0.1bp以内で丸め0.085。betaは薄商いの価格回帰で実測した値ではなく、設備循環・保守構成・集中度からの仮定。ERP5%は日本のNYU推計4.69–5.14%を参照した判断であり、2026-07-31観測値とはしない。8–12%感応度を併記。 取得規模は小さく追加の精密な子会社betaを推計せず、この連結シナリオにも同じ率を使用。",
+        "equity.shares_outstanding_millions": "7/31発行1.920−自己0.085=1.835百万株を8/1直後へ一日近似。現金取得で本件の新株なし。潜在株式は元シナリオの価値引当のみ、分母は二重希薄化しない。",
+        "equity.adjustments.non_operating_cash.amount": "親会社現金同等物1623.204−既存必要現金550−取得対価93−未払取得費用仮定0+Godai現金60−Godai必要現金15=1025.204。親会社定期預金34.931は既存営業現金側に残す。",
+        "equity.adjustments.other_non_operating_assets.amount": "外部債券140×既存掛目1のみ。Godai株式/契約権利は連結消去。持分法投資・Godai金融資産を別途加算しない（仮定BSでは資産全額を営業資産/現金に配分）。",
+        "equity.adjustments.interest_bearing_debt.amount": "親会社公表借入ゼロ+Godai仮定30。総負債153の一部のみ。価格から借入を推定したものではない。",
+        "equity.adjustments.lease_debt.amount": "親会社認識リースゼロ+Godai仮定2。Godai償却・CAPEXに資産効果を含め、リース元本CFは別途FCFFに引かない。未認識営業賃借は既存営業費に含む仮定。",
+        "equity.adjustments.pension_claims.amount": "親会社233.600+Godai仮定2。不足額を請求権として一度控除、過去勤務分の支払をFCFFに再控除しない。",
+        "equity.adjustments.preferred_claims.amount": "親会社普通株のみ、Godai取得開示の全株取得に優先請求の記載なし。対象会社に別途優先請求なしという明示的条件で0。新規判明時に控除。",
+        "equity.adjustments.nci.amount": "Godai議決権100%取得。対象範囲は親会社とGodaiのみ、Godai傘下に少数持分子会社なしという条件で0。",
+        "equity.adjustments.other_claims.amount": "親会社税119.893+2.651+Godai仮定税3+既存オプション価値引当15.503870520574612。取得対価93は支払済みのため請求権から除去。取得費用は現金からのみ処理。PPA税はnetの資産調整に含む条件で追加DTLなし。"
+      },
+      "claimed_results": {
+        "enterprise_value": "7563.85955735688787814544148951656001907171035",
+        "equity_value": "8320.41568683631326614544148951656001907171035",
+        "value_per_share": "4534.28647783995273359424604333327521475297567"
+      }
+    }
+  ],
+  "missing_items": [
+    "Godaiの2026-08-01取得BS未開示。2026-02-28総資産236・純資産83・総負債153を据置く近似。5か月分の損益/配当/増減は不明であり、仮定BSの範囲は統計的信頼区間ではない。",
+    "Godaiの現金・借入・リース・税・年金の内訳未開示。弱気/基準/強気の整合する資産負債配分で条件計算した。公表実績や確定上限ではない。",
+    "取得費用5.876の7月31日時点の既払額不明。残支払は弱気/基準5.876、強気0と仮定。残費用は7/31営業未払金に含まれるという条件。t0支払後の初期親会社NWCを残費用分増やしFY2027deltaを同額減算する。未計上/非営業負債ならこのNWC補正を外す。",
+    "PPA・のれんと税務簿価未確定。net評価調整−30/−10/+10、のれん40/20/0、期間5/10/10年は研究仮定。のれん損金算入なし、既存繰越欠損金の便益未評価。",
+    "Godai傘下企業・優先請求・持分法投資・制限現金・オフバランス請求の詳細未確認。本件開示と単純BSを基に追加対象なしの条件。判明額は適切な区分へ一度反映する。",
+    "内部取引額、期末内部在庫利益、移管価格、資金移動は未開示。内部売上は両側同額消去、重要な未実現内部利益なしとする。営業CFは対外支出のみ。",
+    "親会社の潜在株式残数未確定。旧3シナリオの価値引当を保持し、実在分母1.835を固定。株数とオプション価格の1日差は近似。",
+    "FY2027連結会社予想と既存親会社予測の差をGodai会社予想とみなさない。本モデルGodai営業利益は研究回復仮定。",
+    "親会社工場投資・維持投資・事業別NWC等の元モデル仮定は保持。Godai追加投資は別会社の既存設備/小規模拡張で親会社新工場効果を含まない。",
+    "8月1日から翌7月31日までを1年として期末割引2,4,…14半期を使用。1日の端数日調整・7月31日からの親会社営業変動は省略した。"
+  ],
+  "model_notes": "取得直後2026-08-01の仮定付き連結DCF。情報2026-09-14 JST。親会社既存3シナリオを固定してGodaiの営業CFを積上げる。原本の採用承認ではない。取得93はt0現金から一度控除、旧契約権利・未払対価を除去。Godaiの株式価値代理を連結EVへ加算しない。詳細は6225_consolidated_valuation_bridge.json。金額百万円・株数百万株。非損金取得のれん償却の税便益はCF調整で除去し、終価はその償却前経済NOPAT、資本は取得のれん原価を維持。通常の連結開示がある場合に全子会社個別/PPA完了を評価の必須条件とする方針ではない。"
+}
