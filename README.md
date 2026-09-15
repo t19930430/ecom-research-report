@@ -2,6 +2,8 @@
 
 [スマホ・PCでレポートを読む](https://t19930430.github.io/ecom-research-report/)
 
+2026年9月16日：株価チャートをTradingView Lightweight Charts 5.2.1へ変更。データは9月15日のスナップショットを保持。
+
 2026年9月15日改訂。会社の決算資料、既存の連結DCF研究モデル、名古屋証券取引所の日報から作成した静的サイトです。企業の公式レポートではありません。
 
 - 財務実績：2026年7月期まで（単体）
@@ -13,7 +15,7 @@
 
 ## ファイル
 
-- `index.html`：本文と独自図表。外部JavaScriptライブラリ・追跡ツールなし
+- `index.html`：本文と独自図表。株価描画には同梱のLightweight Chartsを使用。追跡ツールなし
 - `ecom-company-report-20260915.pdf`：印刷用10ページ
 - `financial-data.csv`：財務原数値と出典
 - `technical-data.csv`：株価と指標、営業日ごとの出典URL
@@ -22,3 +24,7 @@
 - `sources.csv`：主な出典一覧
 
 売買不成立日のOHLCは欠損のまま保持し、出来高は0。指標計算だけ前回の約定終値を繰り越します。計算式と限界は本文に記載しています。
+
+## チャートライブラリ
+
+[TradingView Lightweight Charts™](https://www.tradingview.com/) 5.2.1（Apache-2.0）を使用。帰属表示・LICENSE・NOTICEとFancy CanvasのMITライセンスを `vendor/lightweight-charts-5.2.1/` に同梱しています。指標と株価データはこのレポート側で供給しています。
